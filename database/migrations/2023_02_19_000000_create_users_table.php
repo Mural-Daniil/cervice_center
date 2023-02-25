@@ -21,9 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            
-            $table->unsignedBigInteger('role_id');
-            $table->foreign('role_id', 'user_role_fk')->on('roles')->references('id')->default('2');
+
         });
     }
 

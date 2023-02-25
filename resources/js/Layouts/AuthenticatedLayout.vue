@@ -30,8 +30,17 @@ const showingNavigationDropdown = ref(false);
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                    Главная страница
                                 </NavLink>
+                                <NavLink
+                                :href="route('service')" :active="route().current('service')">
+                                    Услуги
+                                </NavLink>
+                                <NavLink 
+                                :href="route('role')" :active="route().current('role')">
+                                    Роли
+                                </NavLink>
+
                             </div>
                         </div>
 
@@ -45,7 +54,7 @@ const showingNavigationDropdown = ref(false);
                                                 type="button"
                                                 class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150"
                                             >
-                                                {{ $page.props.auth.user.name }}
+                                                {{ $page.props.auth.user.first_name }}
 
                                                 <svg
                                                     class="ml-2 -mr-0.5 h-4 w-4"
